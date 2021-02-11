@@ -4,9 +4,12 @@ import { AppService } from './app.service';
 import { Configuration } from './config/config.keys';
 import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
+import { DatabaseModule } from './database/database.module';
+import { UserModule } from './modules/user/user.module';
+import { RolesModule } from './modules/roles/roles.module';
 
 @Module({
-  imports: [ConfigModule],
+  imports: [ConfigModule, DatabaseModule, UserModule, RolesModule],
   controllers: [AppController],
   providers: [AppService],
 })

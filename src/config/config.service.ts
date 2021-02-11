@@ -18,9 +18,13 @@ export class ConfigService {
             this.envConfig = parse(fs.readFileSync(envFilePath));
         }else{
             
-            console.log(process.env.PORT);
+          
             this.envConfig ={
                 PORT: process.env.PORT,
+                HOST:process.env.HOST,
+                USERNAME:process.env.USERNAME,
+                PASSWORD:process.env.PASSWORD,
+                DATABASE:process.env.DATABASE
             }
 
         }
